@@ -4,6 +4,8 @@ import  http from 'node:http'
 //   - Método HTTP
 //   - URL
 
+// Stateful - Stateless
+
 // GET, POST, PUT, PATCH, DELETE
 
 // GET => Buscar um recurso do back-end
@@ -15,6 +17,8 @@ import  http from 'node:http'
 // JSON - JavaScript Object Notation
 
 // Cabeçalhos (Requisição/Respota) => Metadados
+
+// HTTP Status Code
 
 const users = []
 
@@ -33,10 +37,10 @@ const server = http.createServer((req, res) => {
       name: 'ecthon',
       email: 'ecthon@email.com'
     })
-    return res.end('Criação de usuário')
+    return res.writeHead(201).end()
   }
 
-  return res.end('Hello World!')
+  return res.writeHead(404).end()
 })
 
 server.listen(3333)
