@@ -18,9 +18,19 @@ export class Database {
   #persist() {
     fs.writeFile(databasePath, JSON.stringify(this.#database))
   }
+  // Método Some() 
+  // { name: "Ecthon", email: "Ecthon" }
+  // [['name'], ['Ecthon']], ['email', 'Ecthon']
+  select(table, search){
+    let data = this.#database[table] ?? []
 
-  select(table){
-    const data = this.#database[table] ?? []
+    if(search) {
+      data = data.filter( row => {
+        return Object.entries(search).some(([key, value]) => {
+          return row[key].toLowerCase().includes(value.toLowerCase())
+        })
+      })
+    }
     return data
   }
 
