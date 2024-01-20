@@ -26,7 +26,7 @@ export class Database {
 
   insert(table, data) {
     if (Array.isArray(this.#database[table])) {
-      this.database[table].push(data)
+      this.#database[table].push(data)
     } else {
       this.#database[table] = [data]
     }
@@ -39,7 +39,7 @@ export class Database {
 
     if(rowIndex > -1) {
       this.#database[table].splice(rowIndex, 1)
-      this.#persist
+      this.#persist()
     }
   }
 } 
