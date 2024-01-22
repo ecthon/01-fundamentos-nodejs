@@ -72,3 +72,30 @@ Sim
 </br>
 
 ---
+
+# 🟢 Rotas da aplicação
+
+### Quais são os possíveis tipos de dados enviados de um cliente para o servidor em uma API REST?
+Valores passados como query strings na URL de uma rota para especificar opções adicionais da rota (QueryParameters)
+Valores de identificação de um recurso passados na URL de uma rota (Route Parameters)
+Valores passados no corpo da requisção para especificar os dados da rota(Request Body)
+
+### Após as implementações para transformar os dados da requisição, qual é a propriedade comum usada para acessar os parâmetros de identificação de um recurso passados na URL de uma rota?
+req.params
+
+### Após as implementações para transformar os dados da requisição, qual é o propriedade comum usada para acessar os dados passados no corpo da requisição?
+req.body
+
+### O que são expressões regulares (regex)?
+Sequência de caracteres que formam um padrão de busca
+
+### Qual é o caractere usado para iniciar e finalizar uma expressão regular no JavaScript?
+/
+
+### Qual é o caractere usado para representar qualquer caractere em uma expressão regular no JavaScript?
+.
+
+
+
+
+
